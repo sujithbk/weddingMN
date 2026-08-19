@@ -115,7 +115,15 @@ export default function VenueSection() {
 
   const handleMapRedirect = () => {
     window.open(
-      "https://maps.app.goo.gl/Het3WCiPber8ocNn6",
+      "https://maps.app.goo.gl/R9mU4JzKg33bCyff6",
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
+
+  const handleMapRedirect2 = () => {
+    window.open(
+      "https://maps.app.goo.gl/qwnKkKo9LMrovbYJA",
       "_blank",
       "noopener,noreferrer",
     );
@@ -347,10 +355,26 @@ export default function VenueSection() {
           text-transform: uppercase;
           color: #4a3f2c;
           font-weight: 500;
-          margin-bottom: 40px;
+          margin-bottom: 24px;
           border-top: 1px solid rgba(184, 135, 79, 0.3);
           border-bottom: 1px solid rgba(184, 135, 79, 0.3);
           padding: 12px 24px;
+        }
+
+        .wc-venue__reception-text {
+          font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+          font-size: 0.95rem;
+          letter-spacing: 0.05em;
+          color: #4a3f2c;
+          font-weight: 500;
+          margin-bottom: 24px;
+          text-align: center;
+        }
+
+        @media (min-width: 900px) {
+          .wc-venue__reception-text {
+            text-align: left;
+          }
         }
 
         /* Map Box Call To Action Container */
@@ -435,7 +459,7 @@ export default function VenueSection() {
           <div className="wc-church-frame">
             <img
               className="wc-church-frame__img"
-              src="/church.webp"
+              src="/church1.webp"
               alt="St. Jude's Church"
             />
           </div>
@@ -444,7 +468,7 @@ export default function VenueSection() {
         <div className="wc-venue-text">
           <p className="wc-venue__eyebrow">Venue</p>
           <h3 className="wc-venue__title">
-            St Mary’s Forane Church Kodenchery
+            St. Mary's Forane Church, Alakode
           </h3>
 
           <p className="wc-venue__quote">
@@ -453,13 +477,46 @@ export default function VenueSection() {
           </p>
 
           <div className="wc-venue__time-block">
-            Solemn Ceremony at 10:30 AM All Are Welcome
+            Solemn Ceremony at 10:00 AM All Are Welcome
           </div>
 
           {/* Mapbox Trigger Interface Container */}
           <div
             className="wc-map-anchor-box"
             onClick={handleMapRedirect}
+            role="button"
+            tabIndex={0}
+            style={{ marginBottom: "20px" }}
+          >
+            <div className="wc-map-icon-wrapper">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#b8874f"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <div className="wc-map-details">
+              <h4>View Church Location on Maps</h4>
+              <p>5FP8+6FM, SH59, Alakode, Kerala 670571</p>
+            </div>
+          </div>
+
+          <p className="wc-venue__reception-text">
+            Reception will be held at "NADUPARAMBIL CONVENTION CENTER" Alakode
+          </p>
+
+          {/* Mapbox Trigger Interface Container 2 */}
+          <div
+            className="wc-map-anchor-box"
+            onClick={handleMapRedirect2}
             role="button"
             tabIndex={0}
           >
@@ -479,8 +536,8 @@ export default function VenueSection() {
               </svg>
             </div>
             <div className="wc-map-details">
-              <h4>View Location on Maps</h4>
-              <p>C2M4+628, Kannoth Rd, Punnakkadu, Kodenchery, Kerala 673580</p>
+              <h4>View Auditorium Location on Maps</h4>
+              <p>5FG8+55M Jose Junction, Bus Stop, SH59, Jose Nagar, New Naduvil, Kerala 670571</p>
             </div>
           </div>
         </div>

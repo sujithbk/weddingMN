@@ -423,23 +423,23 @@ export default function Invite() {
           <p className="wc-line wc-ceremony">WEDDING CEREMONY OF</p>
 
           <p className="wc-line wc-parent-line wc-bride-parents">
-            S/o Late Mr. Joseph P.J &amp; Dr. Lalimma Joseph, <span className="wc-house-name">Puthiyedath House</span>
+            S/o Mr. Jose CJ &amp; Mrs. Rosily George, <span className="wc-house-name">Chengalikavil House</span>
           </p>
 
-          <p className="wc-line wc-name wc-groom-name">Joel</p>
+          <p className="wc-line wc-name wc-groom-name">Abin</p>
           <p className="wc-line wc-role-label wc-groom-role"></p>
 
           <p className="wc-line wc-amp">&amp;</p>
 
-          <p className="wc-line wc-name wc-bride-name">Jismy</p>
+          <p className="wc-line wc-name wc-bride-name">Ashly</p>
           <p className="wc-line wc-role-label wc-bride-role"></p>
 
           <p className="wc-line wc-parent-line wc-groom-parents">
-            D/o Mr. Saji Joseph &amp; Mrs. Reji Saji, <span className="wc-house-name">Thaimattathil House</span>
+            D/o Mr. Babichan Thomas &amp; Mrs. Sherly, <span className="wc-house-name">Edamulayil House</span>
           </p>
 
-          <p className="wc-line wc-date">On Saturday, 29th August, 2026</p>
-          <p className="wc-line wc-time">at 10:30 am</p>
+          <p className="wc-line wc-date">On Saturday, 14th September, 2026</p>
+          <p className="wc-line wc-time">at 10:00 am</p>
 
           <p className="wc-line wc-wishes-title">Best wishes from</p>
           <p className="wc-line wc-wishes-names">

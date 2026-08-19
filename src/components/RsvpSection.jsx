@@ -38,24 +38,24 @@ function FallingParticle() {
 
 // Trimmed to end at /exec — double-check this matches your Apps Script deployment URL
 const GOOGLE_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbzy5ynUlgPHiv3dawVu1EFEew-WdlCb8Tq9WzmG1x5NqOkMmbdxfCYzSrWi4nwF_ldO8w/exec";
+  "https://script.google.com/macros/s/AKfycbx1oJhhNPP53DWpmwp07aTNaUvfbzE4CDfH8LyIRwAaU-MRLQIjKLsZVczkeB11CFS0uw/exec";
 
 const EMPTY_FORM = {
   name: "",
   attendance: "Yes",
   guests: "1",
-  message: ""
+  message: "",
 };
 
-// Target Date Setup: August 29, 11:00 AM
+// Target Date Setup: September 14, 10:00 AM
 const getTargetDate = () => {
   const now = new Date();
   let targetYear = now.getFullYear();
-  let target = new Date(`August 29, ${targetYear} 11:00:00`);
+  let target = new Date(`September 14, ${targetYear} 10:00:00`);
 
-  // If August 29 11:00 AM has already passed this year, point to next year
+  // If September 14 10:00 AM has already passed this year, point to next year
   if (now > target) {
-    target = new Date(`August 29, ${targetYear + 1} 11:00:00`);
+    target = new Date(`September 14, ${targetYear + 1} 10:00:00`);
   }
   return target;
 };
@@ -75,7 +75,7 @@ export default function RsvpSection() {
     days: 0,
     hours: 0,
     minutes: 0,
-    seconds: 0
+    seconds: 0,
   });
 
   // Timer Calculation Logic
@@ -91,7 +91,7 @@ export default function RsvpSection() {
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
           hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
           minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60)
+          seconds: Math.floor((difference / 1000) % 60),
         });
       } else {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
@@ -110,7 +110,7 @@ export default function RsvpSection() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.15 },
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
@@ -157,7 +157,7 @@ export default function RsvpSection() {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
-        body: JSON.stringify(form)
+        body: JSON.stringify(form),
       });
       setSubmitStatus("success");
     } catch (err) {
@@ -652,28 +652,37 @@ export default function RsvpSection() {
         {/* Top Segment */}
         <h2 className="wc-rsvp__title">Confirm Your Attendance</h2>
         <p className="wc-rsvp__subtitle">
-          To help us prepare for a joyful celebration, kindly confirm your attendance.
+          To help us prepare for a joyful celebration, kindly confirm your
+          attendance.
         </p>
 
         {/* Live Aesthetic Countdown Timer */}
         <div className="wc-timer-container">
           <div className="wc-timer-box">
-            <span className="wc-timer-number">{String(timeLeft.days).padStart(2, "0")}</span>
+            <span className="wc-timer-number">
+              {String(timeLeft.days).padStart(2, "0")}
+            </span>
             <span className="wc-timer-label">Days</span>
           </div>
           <span className="wc-timer-colon">:</span>
           <div className="wc-timer-box">
-            <span className="wc-timer-number">{String(timeLeft.hours).padStart(2, "0")}</span>
+            <span className="wc-timer-number">
+              {String(timeLeft.hours).padStart(2, "0")}
+            </span>
             <span className="wc-timer-label">Hours</span>
           </div>
           <span className="wc-timer-colon">:</span>
           <div className="wc-timer-box">
-            <span className="wc-timer-number">{String(timeLeft.minutes).padStart(2, "0")}</span>
+            <span className="wc-timer-number">
+              {String(timeLeft.minutes).padStart(2, "0")}
+            </span>
             <span className="wc-timer-label">Mins</span>
           </div>
           <span className="wc-timer-colon">:</span>
           <div className="wc-timer-box">
-            <span className="wc-timer-number">{String(timeLeft.seconds).padStart(2, "0")}</span>
+            <span className="wc-timer-number">
+              {String(timeLeft.seconds).padStart(2, "0")}
+            </span>
             <span className="wc-timer-label">Secs</span>
           </div>
         </div>
@@ -686,18 +695,26 @@ export default function RsvpSection() {
             onClick={handleRsvpClick}
             aria-label="Open RSVP form"
           >
-            <img src="/rsvp.webp" alt="RSVP Wax Seal Logo Asset" className="wc-rsvp-seal-img" />
+            <img
+              src="/rsvp.webp"
+              alt="RSVP Wax Seal Logo Asset"
+              className="wc-rsvp-seal-img"
+            />
           </button>
           <span className="wc-rsvp__action-text">Click to open</span>
         </div>
 
         {/* Bottom Closing Signature Segment */}
         <p className="wc-rsvp__closing">Hope to see you there!</p>
-        <span className="wc-rsvp__signature">Joel and Jismy</span>
+        <span className="wc-rsvp__signature">Abin and Ashly</span>
       </div>
 
       {isModalOpen && (
-        <div className="wc-rsvp-modal-backdrop" onClick={closeModal} role="presentation">
+        <div
+          className="wc-rsvp-modal-backdrop"
+          onClick={closeModal}
+          role="presentation"
+        >
           <div
             className="wc-rsvp-modal-card"
             onClick={(e) => e.stopPropagation()}
@@ -705,7 +722,11 @@ export default function RsvpSection() {
             aria-modal="true"
             aria-labelledby="wc-rsvp-modal-title"
           >
-            <button className="wc-rsvp-modal-close" onClick={closeModal} aria-label="Close RSVP form">
+            <button
+              className="wc-rsvp-modal-close"
+              onClick={closeModal}
+              aria-label="Close RSVP form"
+            >
               &times;
             </button>
 
@@ -713,7 +734,8 @@ export default function RsvpSection() {
               <div className="wc-rsvp-modal-success">
                 <h3 className="wc-rsvp-modal-success-title">Thank You!</h3>
                 <p className="wc-rsvp-modal-success-text">
-                  Your RSVP has been received. We can&apos;t wait to celebrate with you.
+                  Your RSVP has been received. We can&apos;t wait to celebrate
+                  with you.
                 </p>
                 <button className="wc-rsvp-modal-submit" onClick={closeModal}>
                   Close
@@ -724,7 +746,9 @@ export default function RsvpSection() {
                 <h3 id="wc-rsvp-modal-title" className="wc-rsvp-modal-title">
                   RSVP
                 </h3>
-                <p className="wc-rsvp-modal-subtitle">Kindly fill in your details below.</p>
+                <p className="wc-rsvp-modal-subtitle">
+                  Kindly fill in your details below.
+                </p>
 
                 <form className="wc-rsvp-modal-form" onSubmit={handleSubmit}>
                   <div className="wc-rsvp-field">
@@ -744,7 +768,9 @@ export default function RsvpSection() {
                     <select
                       id="wc-rsvp-attendance"
                       value={form.attendance}
-                      onChange={(e) => updateField("attendance", e.target.value)}
+                      onChange={(e) =>
+                        updateField("attendance", e.target.value)
+                      }
                     >
                       <option value="Yes">Joyfully Accept</option>
                       <option value="No">Regretfully Decline</option>
@@ -785,7 +811,11 @@ export default function RsvpSection() {
                     </p>
                   )}
 
-                  <button type="submit" className="wc-rsvp-modal-submit" disabled={isSubmitting}>
+                  <button
+                    type="submit"
+                    className="wc-rsvp-modal-submit"
+                    disabled={isSubmitting}
+                  >
                     {isSubmitting ? "Sending..." : "Submit RSVP"}
                   </button>
                 </form>
