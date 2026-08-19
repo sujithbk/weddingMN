@@ -406,7 +406,7 @@ export default function Invite() {
       <div
         className="wc-frame"
         role="img"
-        aria-label="Wedding invitation for Joel and Jismy — Saturday, 29th August 2026"
+        aria-label="Wedding invitation for Abin and Ashly — Saturday, 29th August 2026"
       >
         {/* Animated Falling Petals Layer */}
         <div className="wc-global-particle-field">

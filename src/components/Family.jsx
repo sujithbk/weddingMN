@@ -257,7 +257,7 @@ export default function WelcomeSection() {
             As we step into this beautiful new chapter of our lives, we are overwhelmingly grateful for your love, support, and presence. Having you here to witness our union fills our hearts with immense joy. Thank you for being a part of our story and celebrating this unforgettable milestone with us.
           </p>
 
-          <div className="wc-welcome-signature">Joel & Jismy</div>
+          <div className="wc-welcome-signature">Abin & Ashly</div>
           <div className="wc-welcome-sub-signature">With love & gratitude</div>
         </div>
       </div>
