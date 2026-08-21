@@ -477,7 +477,7 @@ export default function VenueSection() {
           </p>
 
           <div className="wc-venue__time-block">
-            Solemn Ceremony at 10:00 AM All Are Welcome
+            Solemn Ceremony at 10:30 AM All Are Welcome
           </div>
 
           {/* Mapbox Trigger Interface Container */}

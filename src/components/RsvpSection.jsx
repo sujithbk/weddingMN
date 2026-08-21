@@ -47,15 +47,15 @@ const EMPTY_FORM = {
   message: "",
 };
 
-// Target Date Setup: September 14, 10:00 AM
+// Target Date Setup: September 14, 10:30 AM
 const getTargetDate = () => {
   const now = new Date();
   let targetYear = now.getFullYear();
-  let target = new Date(`September 14, ${targetYear} 10:00:00`);
+  let target = new Date(`September 14, ${targetYear} 10:30:00`);
 
-  // If September 14 10:00 AM has already passed this year, point to next year
+  // If September 14 10:30 AM has already passed this year, point to next year
   if (now > target) {
-    target = new Date(`September 14, ${targetYear + 1} 10:00:00`);
+    target = new Date(`September 14, ${targetYear + 1} 10:30:00`);
   }
   return target;
 };
