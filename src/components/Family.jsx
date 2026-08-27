@@ -38,7 +38,13 @@ function FallingParticle() {
 
 function HeaderFlourish({ className = "", isOpen }) {
   return (
-    <svg width="60" height="20" viewBox="0 0 60 20" fill="none" className={`wc-family-flourish ${className}`}>
+    <svg
+      width="60"
+      height="20"
+      viewBox="0 0 60 20"
+      fill="none"
+      className={`wc-family-flourish ${className}`}
+    >
       <path
         pathLength="1"
         d="M10 10 C 20 2, 25 18, 30 10 C 35 2, 40 18, 50 10"
@@ -48,11 +54,23 @@ function HeaderFlourish({ className = "", isOpen }) {
         style={{
           strokeDasharray: 1,
           strokeDashoffset: isOpen ? 0 : 1,
-          transition: "stroke-dashoffset 1.1s ease"
+          transition: "stroke-dashoffset 1.1s ease",
         }}
       />
-      <circle cx="5" cy="10" r="1.5" fill="#b8874f" style={{ opacity: isOpen ? 1 : 0, transition: "opacity 0.4s ease 1s" }} />
-      <circle cx="55" cy="10" r="1.5" fill="#b8874f" style={{ opacity: isOpen ? 1 : 0, transition: "opacity 0.4s ease 1s" }} />
+      <circle
+        cx="5"
+        cy="10"
+        r="1.5"
+        fill="#b8874f"
+        style={{ opacity: isOpen ? 1 : 0, transition: "opacity 0.4s ease 1s" }}
+      />
+      <circle
+        cx="55"
+        cy="10"
+        r="1.5"
+        fill="#b8874f"
+        style={{ opacity: isOpen ? 1 : 0, transition: "opacity 0.4s ease 1s" }}
+      />
     </svg>
   );
 }
@@ -71,7 +89,7 @@ export default function WelcomeSection() {
           observer.disconnect();
         }
       },
-      { threshold: 0, rootMargin: "0px 0px -5% 0px" }
+      { threshold: 0, rootMargin: "0px 0px -5% 0px" },
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -86,7 +104,7 @@ export default function WelcomeSection() {
   return (
     <section className="wc-welcome-section" ref={sectionRef}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
         /* Default (Mobile) styles specifically for the Welcome section */
         .wc-welcome-section {
@@ -214,7 +232,7 @@ export default function WelcomeSection() {
         }
 
         .wc-welcome-signature {
-          font-family: 'Great Vibes', cursive;
+          font-family: 'Allura', cursive;
           font-size: clamp(1.8rem, 4vw, 2.5rem);
           color: #b8874f;
           margin-top: 10px;
@@ -241,20 +259,31 @@ export default function WelcomeSection() {
       <div className={`wc-welcome-content ${isOpen ? "is-open" : ""}`}>
         {/* Top Couple Image */}
         <div className="wc-welcome-hero-wrapper">
-          <img src="/couple.webp" alt="Joyal and Jismy" className="wc-welcome-hero-img" />
+          <img
+            src="/couple.webp"
+            alt="Joyal and Jismy"
+            className="wc-welcome-hero-img"
+          />
         </div>
 
         {/* Section Heading */}
         <div className="wc-family-title-area">
           <HeaderFlourish isOpen={isOpen} />
           <h2>Welcome & Thank You</h2>
-          <HeaderFlourish className="wc-family-flourish-right" isOpen={isOpen} />
+          <HeaderFlourish
+            className="wc-family-flourish-right"
+            isOpen={isOpen}
+          />
         </div>
 
         {/* Heartfelt Message Box */}
         <div className="wc-welcome-card">
           <p className="wc-welcome-paragraph">
-            As we step into this beautiful new chapter of our lives, we are overwhelmingly grateful for your love, support, and presence. Having you here to witness our union fills our hearts with immense joy. Thank you for being a part of our story and celebrating this unforgettable milestone with us.
+            As we step into this beautiful new chapter of our lives, we are
+            overwhelmingly grateful for your love, support, and presence. Having
+            you here to witness our union fills our hearts with immense joy.
+            Thank you for being a part of our story and celebrating this
+            unforgettable milestone with us.
           </p>
 
           <div className="wc-welcome-signature">Abin & Ashly</div>

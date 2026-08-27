@@ -57,7 +57,7 @@ export default function Invite() {
   return (
     <section className="wc-invite-section">
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:wght@600;700&display=swap');
 
         html, body {
           margin: 0;
@@ -154,7 +154,7 @@ export default function Invite() {
         .wc-groom-parents { top: 43.5%; }
 
         .wc-name {
-          font-family: 'Great Vibes', cursive;
+          font-family: 'Allura', cursive;
           font-size: 9.5cqw;
           line-height: 1;
           color: #4a3220;
@@ -423,19 +423,21 @@ export default function Invite() {
           <p className="wc-line wc-ceremony">WEDDING CEREMONY OF</p>
 
           <p className="wc-line wc-parent-line wc-bride-parents">
-            S/o Mr. Jose CJ &amp; Mrs. Rosily George, <span className="wc-house-name">Chengalikavil House</span>
+            S/o Mr. Jose CJ &amp; Mrs. Rosily George,{" "}
+            <span className="wc-house-name">Chengalikavil House</span>
           </p>
 
-          <p className="wc-line wc-name wc-groom-name">Dr.Abin</p>
+          <p className="wc-line wc-name wc-groom-name">Dr.Abin Jose</p>
           <p className="wc-line wc-role-label wc-groom-role"></p>
 
           <p className="wc-line wc-amp">&amp;</p>
 
-          <p className="wc-line wc-name wc-bride-name">Dr.Ashly</p>
+          <p className="wc-line wc-name wc-bride-name">Dr.Ashly Sebastian</p>
           <p className="wc-line wc-role-label wc-bride-role"></p>
 
           <p className="wc-line wc-parent-line wc-groom-parents">
-            D/o Mr. Babichan Thomas &amp; Mrs. Sherly, <span className="wc-house-name">Edamulayil House</span>
+            D/o Mr. Babichan Thomas &amp; Mrs. Sherly,{" "}
+            <span className="wc-house-name">Edamulayil House</span>
           </p>
 
           <p className="wc-line wc-date">On Monday, 14th September, 2026</p>
@@ -443,7 +445,8 @@ export default function Invite() {
 
           <p className="wc-line wc-wishes-title">Best wishes from</p>
           <p className="wc-line wc-wishes-names">
-            Justin &bull; Anitha &bull; Anjali &bull; Subin &bull; Izza &bull; Evana &bull; Able
+            Justin &bull; Anitha &bull; Anjali &bull; Subin &bull; Izza &bull;
+            Evana &bull; Able
           </p>
         </div>
 
