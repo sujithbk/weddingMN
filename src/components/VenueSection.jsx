@@ -115,7 +115,7 @@ export default function VenueSection() {
 
   const handleMapRedirect = () => {
     window.open(
-      "https://maps.app.goo.gl/R9mU4JzKg33bCyff6",
+      "https://maps.app.goo.gl/Fx6G8tphXQXm6Qf88",
       "_blank",
       "noopener,noreferrer",
     );
@@ -123,7 +123,7 @@ export default function VenueSection() {
 
   const handleMapRedirect2 = () => {
     window.open(
-      "https://maps.app.goo.gl/qwnKkKo9LMrovbYJA",
+      "https://maps.app.goo.gl/NkTXcyUDfUMKQZW56",
       "_blank",
       "noopener,noreferrer",
     );
@@ -459,8 +459,8 @@ export default function VenueSection() {
           <div className="wc-church-frame">
             <img
               className="wc-church-frame__img"
-              src="/church1.webp"
-              alt="St. Jude's Church"
+              src="/mobilech.png"
+              alt="St. Mary's Jacobite Syrian Soonoro Church, Karadiyala"
             />
           </div>
         </div>
@@ -468,7 +468,7 @@ export default function VenueSection() {
         <div className="wc-venue-text">
           <p className="wc-venue__eyebrow">Venue</p>
           <h3 className="wc-venue__title">
-            St. Mary's Forane Church, Alakode
+            St. Mary's Jacobite Syrian Soonoro Church, Karadiyala
           </h3>
 
           <p className="wc-venue__quote">
@@ -477,7 +477,7 @@ export default function VenueSection() {
           </p>
 
           <div className="wc-venue__time-block">
-            Solemn Ceremony at 10:30 AM All Are Welcome
+            Church Ceremony from 9:30 AM to 11:00 AM · All Are Welcome
           </div>
 
           {/* Mapbox Trigger Interface Container */}
@@ -505,12 +505,14 @@ export default function VenueSection() {
             </div>
             <div className="wc-map-details">
               <h4>View Church Location on Maps</h4>
-              <p>5FP8+6FM, SH59, Alakode, Kerala 670571</p>
+              <p>St. Mary's Jacobite Syrian Soonoro Church, Karadiyala</p>
             </div>
           </div>
 
           <p className="wc-venue__reception-text">
-            Reception will be held at "NADUPARAMBIL CONVENTION CENTER" Alakode
+            Reception will be held at Jeevz Square Convention Centre
+            <br />
+            12:00 PM to 3:00 PM
           </p>
 
           {/* Mapbox Trigger Interface Container 2 */}
@@ -536,8 +538,8 @@ export default function VenueSection() {
               </svg>
             </div>
             <div className="wc-map-details">
-              <h4>View Auditorium Location on Maps</h4>
-              <p>5FG8+55M Jose Junction, Bus Stop, SH59, Jose Nagar, New Naduvil, Kerala 670571</p>
+              <h4>View Reception Location on Maps</h4>
+              <p>Jeevz Square, Kochi - Salem Hwy, Kallidukku, Pattikkad, Thrissur</p>
             </div>
           </div>
         </div>

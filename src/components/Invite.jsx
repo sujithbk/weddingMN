@@ -82,15 +82,33 @@ export default function Invite() {
           width: 100vw;
           height: 100vh;
           container-type: inline-size;
-          background-image: url('/frame.webp');
+          background-image: url('/mobile-invatation.png');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
         }
 
+        @media (max-width: 899px) {
+          .wc-invite-section {
+            height: auto;
+          }
+
+          .wc-frame {
+            height: auto;
+            aspect-ratio: 1536 / 2752;
+            background-size: 100% 100%;
+          }
+
+          .wc-text-layer .wc-cross { display: none; }
+          .wc-text-layer .wc-invited { top: 15%; }
+          .wc-text-layer .wc-ceremony { top: 18%; }
+          .wc-text-layer .wc-bride-parents { top: 22%; }
+          .wc-text-layer .wc-couple-names { top: 28%; height: 14%; }
+        }
+
         @media (min-width: 900px) {
           .wc-frame {
-            background-image: url('/frame_d.webp');
+            background-image: url('/landingdsk.png');
           }
         }
 
@@ -154,31 +172,39 @@ export default function Invite() {
         .wc-groom-parents { top: 43.5%; }
 
         .wc-name {
-          font-family: 'Allura', cursive;
-          font-size: 9.5cqw;
-          line-height: 1;
+          font-family: 'Allura', 'Segoe Script', cursive;
+          font-size: 8.8cqw;
+          font-weight: 400;
+          letter-spacing: 0;
+          line-height: 0.95;
+          white-space: nowrap;
+          flex-shrink: 0;
           color: #4a3220;
         }
 
-        .wc-groom-name { top: 25%; }
-        .wc-bride-name { top: 36%; }
-
-        .wc-role-label {
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 1.7cqw;
-          letter-spacing: 0.35em;
-          text-transform: uppercase;
-          color: #8a6d3f;
+        .wc-couple-names {
+          position: absolute;
+          top: 25%;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 82%;
+          height: 17%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 0;
+          text-align: center;
+          padding-top: 4.5cqw;
         }
 
-        .wc-groom-role { top: 30%; }
-        .wc-bride-role { top: 41.5%; }
-
         .wc-amp {
-          top: 31%;
-          font-family: 'Great Vibes', cursive;
-          font-size: 6cqw;
+          font-family: 'Cormorant Garamond', serif;
+          font-style: italic;
+          font-size: 3.5cqw;
           color: #6b4a2b;
+          line-height: 1;
+          flex-shrink: 0;
         }
 
         .wc-date {
@@ -198,14 +224,17 @@ export default function Invite() {
         }
 
         .wc-lunch {
-          top: 54.5%;
-          font-family: 'Cormorant Garamond', serif;
-          font-size: 2.6cqw;
-          color: #5b3f26;
+          top: 55.5%;
+          font-family: 'Playfair Display', serif;
+          font-size: 3.4cqw;
+          font-weight: 700;
+          line-height: 1.25;
+          letter-spacing: 0.03em;
+          color: #4a3220;
         }
 
         .wc-wishes-title {
-          top: 57.5%;
+          top: 58%;
           font-family: 'Cormorant Garamond', serif;
           font-size: 2cqw;
           letter-spacing: 0.35em;
@@ -214,7 +243,7 @@ export default function Invite() {
         }
 
         .wc-wishes-names {
-          top: 58.3%;
+          top: 60.5%;
           font-family: 'Cormorant Garamond', serif;
           font-style: italic;
           font-weight: 600;
@@ -303,9 +332,43 @@ export default function Invite() {
 
         /* ---------- Desktop overrides ---------- */
         @media (min-width: 900px) {
+          .wc-invite-section, .wc-frame {
+            min-height: 740px;
+          }
+
+          .wc-text-layer {
+            inset: auto;
+            top: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(620px, 66vw);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            text-align: center;
+          }
+
+          .wc-text-layer .wc-line,
+          .wc-text-layer .wc-couple-names,
+          .wc-text-layer .wc-cross {
+            position: static;
+            transform: none;
+            width: 100%;
+          }
+
+          .wc-text-layer .wc-couple-names {
+            height: auto;
+            padding: 8px 0;
+            gap: 0;
+          }
+
           .wc-cross {
-            top: 5%;
-            width: clamp(28px, 2.2vw, 42px);
+            margin-bottom: 4px;
+          }
+          .wc-text-layer .wc-cross {
+            width: 26px;
+            height: 39px;
           }
 
           .wc-invited {
@@ -316,54 +379,55 @@ export default function Invite() {
           .wc-ceremony {
             top: 14%;
             font-size: clamp(20px, 1.4vw, 26px);
+            line-height: 1.25;
           }
 
           .wc-parent-line {
-            font-size: clamp(18px, 1.4vw, 23px);
+            font-size: clamp(17px, 1.2vw, 20px);
             font-weight: 400;
+            line-height: 1.4;
           }
           .wc-bride-parents { top: 17.5%; }
           .wc-groom-parents { top: 43.5%; }
 
           .wc-name {
-            font-size: clamp(48px, 4vw, 72px);
+            font-size: clamp(46px, 3.5vw, 58px);
+            line-height: 1;
           }
-          .wc-groom-name { top: 25%; }
-          .wc-bride-name { top: 36%; }
-
-          .wc-role-label {
-            font-size: clamp(10px, 0.7vw, 13px);
-          }
-          .wc-groom-role { top: 30%; }
-          .wc-bride-role { top: 41.5%; }
+          .wc-couple-names { gap: 0; }
 
           .wc-amp {
-            top: 31%;
-            font-size: clamp(30px, 2.4vw, 44px);
+            font-size: clamp(18px, 1.6vw, 24px);
           }
 
           .wc-date {
             top: 49.5%;
-            font-size: clamp(18px, 1.3vw, 24px);
+            font-size: clamp(18px, 1.2vw, 22px);
+            margin-top: 4px;
+            line-height: 1.3;
           }
 
           .wc-time {
             top: 52.5%;
             font-size: clamp(16px, 1.2vw, 20px); 
+            line-height: 1.3;
           }
 
           .wc-lunch {
-            top: 54.5%;
-            font-size: clamp(13px, 0.9vw, 17px);
+            top: 55.5%;
+            font-size: clamp(16px, 1.2vw, 21px);
           }
 
           .wc-wishes-title {
-            top: 57.5%;
+            top: 58%;
             font-size: clamp(11px, 0.8vw, 14px);
+            margin-top: 8px;
+            line-height: 1.4;
+            letter-spacing: 0.2em;
           }
 
           .wc-wishes-names {
-            top: 58.3%;
+            top: 60.5%;
             font-size: clamp(15px, 1vw, 19px);
           }
 
@@ -406,7 +470,7 @@ export default function Invite() {
       <div
         className="wc-frame"
         role="img"
-        aria-label="Wedding invitation for Abin and Ashly — Saturday, 29th August 2026"
+        aria-label="Wedding invitation for Martin and Nivya — Monday, October 26, 2026, Church Ceremony from 9:30 AM to 11:00 AM"
       >
         {/* Animated Falling Petals Layer */}
         <div className="wc-global-particle-field">
@@ -423,30 +487,30 @@ export default function Invite() {
           <p className="wc-line wc-ceremony">WEDDING CEREMONY OF</p>
 
           <p className="wc-line wc-parent-line wc-bride-parents">
-            S/o Mr. Jose CJ &amp; Mrs. Rosily George,{" "}
-            <span className="wc-house-name">Chengalikavil House</span>
+            S/o Mr. U. M. Thankachan &amp; Mrs. Lissy Thankachan
+            <br />
+            <span className="wc-house-name">Uthukuzhiyil House</span>
           </p>
 
-          <p className="wc-line wc-name wc-groom-name">Dr.Abin Jose</p>
-          <p className="wc-line wc-role-label wc-groom-role"></p>
-
-          <p className="wc-line wc-amp">&amp;</p>
-
-          <p className="wc-line wc-name wc-bride-name">Dr.Ashly Sebastian</p>
-          <p className="wc-line wc-role-label wc-bride-role"></p>
+          <div className="wc-couple-names" aria-label="Martin and Nivya">
+            <p className="wc-name">Martin</p>
+            <p className="wc-amp" aria-hidden="true">&amp;</p>
+            <p className="wc-name">Nivya</p>
+          </div>
 
           <p className="wc-line wc-parent-line wc-groom-parents">
-            D/o Mr. Babichan Thomas &amp; Mrs. Sherly,{" "}
-            <span className="wc-house-name">Edamulayil House</span>
+            D/o Mr. P. A. Joy &amp; Mrs. Mini Joy
+            <br />
+            <span className="wc-house-name">Puttumpurath House</span>
           </p>
 
-          <p className="wc-line wc-date">On Monday, 14th September, 2026</p>
-          <p className="wc-line wc-time">at 10:30 am</p>
+          <p className="wc-line wc-date">On Monday, October 26, 2026</p>
+          <p className="wc-line wc-time">Church Ceremony</p>
+          <p className="wc-line wc-lunch">9:30 AM to 11:00 AM</p>
 
-          <p className="wc-line wc-wishes-title">Best wishes from</p>
+          <p className="wc-line wc-wishes-title">WITH LOVE &amp; BEST WISHES</p>
           <p className="wc-line wc-wishes-names">
-            Justin &bull; Anitha &bull; Anjali &bull; Subin &bull; Izza &bull;
-            Evana &bull; Able
+            Eldhose, Melvin Thankachan, Almesh
           </p>
         </div>
 

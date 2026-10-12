@@ -47,18 +47,7 @@ const EMPTY_FORM = {
   message: "",
 };
 
-// Target Date Setup: September 14, 10:30 AM
-const getTargetDate = () => {
-  const now = new Date();
-  let targetYear = now.getFullYear();
-  let target = new Date(`September 14, ${targetYear} 10:30:00`);
-
-  // If September 14 10:30 AM has already passed this year, point to next year
-  if (now > target) {
-    target = new Date(`September 14, ${targetYear + 1} 10:30:00`);
-  }
-  return target;
-};
+const getTargetDate = () => new Date("2026-10-26T09:30:00+05:30");
 
 export default function RsvpSection() {
   const sectionRef = useRef(null);
@@ -706,7 +695,7 @@ export default function RsvpSection() {
 
         {/* Bottom Closing Signature Segment */}
         <p className="wc-rsvp__closing">Hope to see you there!</p>
-        <span className="wc-rsvp__signature">Abin and Ashly</span>
+        <span className="wc-rsvp__signature">Martin and Nivya</span>
       </div>
 
       {isModalOpen && (

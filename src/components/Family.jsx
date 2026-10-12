@@ -260,8 +260,8 @@ export default function WelcomeSection() {
         {/* Top Couple Image */}
         <div className="wc-welcome-hero-wrapper">
           <img
-            src="/couple.webp"
-            alt="Joyal and Jismy"
+            src="/alone.png"
+            alt="Martin and Nivya"
             className="wc-welcome-hero-img"
           />
         </div>
@@ -286,7 +286,7 @@ export default function WelcomeSection() {
             unforgettable milestone with us.
           </p>
 
-          <div className="wc-welcome-signature">Abin & Ashly</div>
+          <div className="wc-welcome-signature">Martin &amp; Nivya</div>
           <div className="wc-welcome-sub-signature">With love & gratitude</div>
         </div>
       </div>

@@ -2,8 +2,7 @@ import { useLayoutEffect, useRef, useState, useEffect } from "react";
 
 const TIMELINE_EVENTS = [
   { time: "9 AM", name: "Guest Arrival" },
-  { time: "9:30 AM", name: " Welcoming" },
-  { time: "10:30 AM", name: "Wedding Ceremony" },
+  { time: "9:30 AM to 11:00 AM", name: "Church Ceremony" },
   { time: "12:00 PM", name: "Welcome Toast" },
   { time: "12:30 PM", name: "Lunch" },
 ];

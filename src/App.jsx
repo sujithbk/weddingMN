@@ -8,33 +8,34 @@ import InvitationSection from "./components/InvitationSection";
 
 const FRAME_SETS = {
   mobile: {
-    folder: "/images",
-    start: 20,
-    end: 185,
+    folder: "/imagesmobile",
+    start: 1,
+    end: 180,
+    padding: 4,
     fps: 30,
   },
   desktop: {
-    folder: "/images_d",
+    folder: "/image123",
     start: 1,
-    end: 80,
+    end: 120,
+    padding: 4,
     fps: 30,
   },
 };
 
 const DESKTOP_QUERY = "(min-width: 900px)";
 
-const framePath = (folder, i) =>
-  `${folder}/frame_${String(i).padStart(2, "0")}.webp`;
+const framePath = (folder, i, padding) =>
+  `${folder}/frame_${String(i).padStart(padding, "0")}.webp`;
 
 const STATIC_IMAGES = [
-  "/church.webp",
-  "/church1.webp",
-  "/couple.webp",
+  "/mobilech.png",
+  "/alone.png",
   "/floral.webp",
   "/flower.webp",
-  "/frame.webp",
+  "/mobile-invatation.png",
   "/frame_186.webp",
-  "/frame_d.webp",
+  "/landingdsk.png",
   "/rsvp.webp",
   "/s2.webp",
   "/ss.webp",
@@ -243,7 +244,7 @@ export default function App() {
   };
 
   useEffect(() => {
-    const { folder, start, end, fps } = isDesktop
+    const { folder, start, end, fps, padding } = isDesktop
       ? FRAME_SETS.desktop
       : FRAME_SETS.mobile;
     const frameCount = end - start + 1;
@@ -278,7 +279,7 @@ export default function App() {
         const img = new Image();
         img.onload = resolve;
         img.onerror = resolve;
-        img.src = framePath(folder, frameNum);
+        img.src = framePath(folder, frameNum, padding);
         images[frameNum] = img;
       });
     }
