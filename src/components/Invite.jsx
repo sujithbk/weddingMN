@@ -82,7 +82,7 @@ export default function Invite() {
           width: 100vw;
           height: 100vh;
           container-type: inline-size;
-          background-image: url('/mobile-invatation.png');
+          background-image: url('/mobile-invatation.webp');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -108,7 +108,7 @@ export default function Invite() {
 
         @media (min-width: 900px) {
           .wc-frame {
-            background-image: url('/landingdsk.png');
+            background-image: url('/landingdsk.webp');
           }
         }
 

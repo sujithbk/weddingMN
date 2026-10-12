@@ -260,7 +260,7 @@ export default function WelcomeSection() {
         {/* Top Couple Image */}
         <div className="wc-welcome-hero-wrapper">
           <img
-            src="/alone.png"
+            src="/alone.webp"
             alt="Martin and Nivya"
             className="wc-welcome-hero-img"
           />

@@ -15,7 +15,7 @@ const FRAME_SETS = {
     fps: 30,
   },
   desktop: {
-    folder: "/image123",
+    folder: "/image121",
     start: 1,
     end: 120,
     padding: 4,
@@ -29,13 +29,13 @@ const framePath = (folder, i, padding) =>
   `${folder}/frame_${String(i).padStart(padding, "0")}.webp`;
 
 const STATIC_IMAGES = [
-  "/mobilech.png",
-  "/alone.png",
+  "/mobilech.webp",
+  "/alone.webp",
   "/floral.webp",
   "/flower.webp",
-  "/mobile-invatation.png",
+  "/mobile-invatation.webp",
   "/frame_186.webp",
-  "/landingdsk.png",
+  "/landingdsk.webp",
   "/rsvp.webp",
   "/s2.webp",
   "/ss.webp",
