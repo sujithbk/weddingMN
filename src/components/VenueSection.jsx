@@ -459,7 +459,7 @@ export default function VenueSection() {
           <div className="wc-church-frame">
             <img
               className="wc-church-frame__img"
-              src="/mobilech.webp"
+              src="/church_transparent_background.webp"
               alt="St. Mary's Jacobite Syrian Soonoro Church, Karadiyala"
             />
           </div>

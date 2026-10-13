@@ -29,7 +29,7 @@ const framePath = (folder, i, padding) =>
   `${folder}/frame_${String(i).padStart(padding, "0")}.webp`;
 
 const STATIC_IMAGES = [
-  "/mobilech.webp",
+  "/church_transparent_background.webp",
   "/alone.webp",
   "/floral.webp",
   "/flower.webp",
